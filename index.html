@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tarea</title>
+	<style>
+	body{
+			background-color:  #64B5F6;
+		}
+		.ti{
+			position: absolute;
+			width: 600px;
+			height: 80px;
+			background-color: #ED2939 ;
+			color: black;
+			border: 5px black solid;
+			top: 15px;
+			left: 360px;
+			border-radius: 20px;
+			}
+		.ej1{
+			position: absolute;
+			width: 220px;
+			height: 80px;
+			background-color: #ED2939 ;
+			color: black;
+			border: 5px black solid;
+			top: 220px;
+			left: 90px;
+			border-radius: 20px;
+		}
+		.ej2{
+			position: absolute;
+			width: 220px;
+			height: 80px;
+			background-color: #ED2939 ;
+			color: black;
+			border: 5px black solid;
+			top: 420px;
+			left: 90px;
+			border-radius: 20px;
+		}
+		.cu{
+			position: absolute;
+			top: 140px;
+			left: 380px;
+			width: 0px;
+			height: 450px;
+			background-color: #FFBC42  ;
+			font-size: 50px;
+			font-family: ola;
+			transition: all 1s;
+		}
+		.cu1{
+			position: absolute;
+			top: 140px;
+			left: 380px;
+			width: 0px;
+			height: 450px;
+			background-color: #686C66 ;
+			transition: all 1s;
+
+		}
+		.cu2{
+			position: absolute;
+			top: 140px;
+			left: 380px;
+			width: 0px;
+			height: 450px;
+			background-color: #FFBC42  ;
+			transition: all 1s;
+		}
+
+
+		.tex1{
+			position: absolute;
+			top: 25px;
+			left: 200px;
+			font-size: 70px;
+			font-family: ola;
+
+		}
+		.tex2{
+			position: absolute;
+			top: 25px;
+			left: 70px;
+			font-size: 70px;
+			font-family: ola;
+
+		}
+		.tex3{
+			position: absolute;
+			top: 25px;
+			left: 70px;
+			font-size: 70px;
+			font-family: ola;
+
+		}
+		.tex4{
+			position: absolute;
+			top: 50px;
+			left: 70px;
+			font-size: 70px;
+			font-family: ola;
+
+		}
+		.img{
+			position: absolute;
+			top: 100px;
+			left: 280px;
+			width: 0px;
+			height: 250px;
+			background-image: url("logo.png");
+			background-size: cover;
+		}
+		.b{
+			position: absolute;
+			top: 150px;
+			left: 250px;
+			height: 60px;
+			color: white;
+			font-size: 80px;
+			font-family: ola;
+			transition: all 1s;
+
+		}
+	
+		@font-face{
+		font-family: buenas;
+		src:url("Fuentes/letra4.ttf");
+		}
+		@font-face{
+		font-family: ola;
+		src:url("Fuentes/l.otf");
+		}
+	</style>
+</head>
+<body>
+	<div class="ti" id="op1" onclick="ti()"><div class="tex1">NEOSISTEMAS</div></div>
+	<div class="ej1" id="op2" onclick="ola()"><div class="tex2">EJE 1</div></div>
+	<div class="ej2" id="op3" onclick="coa()"><div class="tex3">EJE 2</div></div>
+	<div class="cu1" id="cua1"><div class="img" id="i"></div></div>
+	<div class="cu" onmousemove="posi(event)" id="cua"></div>
+	<div class="cu2" id="cua2"><div class="b" id="bo"></div></div>
+	<script>
+		x=0;
+		function ti(){
+			cua1.style.width=830+"px";
+			cua1.style.borderStyle="solid";
+			cua1.style.borderStyle="black";
+			cua1.style.borderWidth=5+"px";
+			i.style.width=250+"px";
+			crono=setTimeout(ti,1000);
+			x=x+1;
+		if(x==3){
+			clearInterval(crono);
+			cua1.style.width=0+"px";
+			cua1.style.borderStyle="solid";
+			cua1.style.borderStyle="black";
+			cua1.style.borderWidth=0+"px";
+			i.style.width=0+"px";
+			x=0;
+			}
+		}
+		y=0;
+		function ola(){
+			cua.style.width=830+"px";
+			cua.style.borderStyle="solid";
+			cua.style.borderStyle="black";
+			cua.style.borderWidth=5+"px";
+			con=setTimeout(ola,1000);
+			y=y+1;
+		if(y==10){
+			clearInterval(con);
+			cua.style.width=0+"px";
+			cua.style.borderStyle="solid";
+			cua.style.borderStyle="black";
+			cua.style.borderWidth=0+"px";
+			cua.style.fontSize=0+"px";
+			}
+		}
+		z=0;
+		function posi(){
+			o=event.clientX;
+			p=event.clientY;
+			cua.innerHTML="Coordenadas: "+o+" "+p+"<br><br><br> Estoy dentro";
+		}
+		q=10;
+		function coa(){
+			cua2.style.width=830+"px";
+			cua2.style.borderStyle="solid";
+			cua2.style.borderStyle="black";
+			cua2.style.borderWidth=5+"px";
+			bo.style.width=200+"px";
+			cot=setTimeout(coa,1000);
+			z=z+1;
+			q=q-1;
+			t=2;
+			suma=t%2;
+			if(q%2==0){
+				bo.style.color="black";
+			}	
+			else{
+				bo.style.color="white";
+			}
+			bo.innerHTML="Quedan "+q;
+			if (q==0) {
+				clearInterval(cot);
+				bo.innerHTML="Nos vemos";
+				bo.style.color="white";
+			}
+		if(z==11){
+			clearInterval(cot);
+			cua2.style.width=0+"px";
+			cua2.style.borderStyle="solid";
+			cua2.style.borderStyle="black";
+			cua2.style.borderWidth=0+"px";
+			b.style.fontSize=0+"px";
+			}
+			
+
+		}
+
+
+	</script>
+
+
+</body>
+</html>
